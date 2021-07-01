@@ -65,7 +65,6 @@ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/rocm/llvm  \
 
 make -j 8
 sudo make install
-unset CXXFLAGS
 
 * For AMD HW (not tested): 
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/rocm/llvm\ 
@@ -92,6 +91,7 @@ sudo make install
 * Install ROCm-Device-Libs
 
 ```
+unset CXXFLAGS
 git clone -b rocm-4.0.0 http://github.com/RadeonOpenCompute/ROCm-Device-Libs.git
 cd ROCm-Device-Libs
 export PATH=/opt/rocm/llvm/bin:$PATH
